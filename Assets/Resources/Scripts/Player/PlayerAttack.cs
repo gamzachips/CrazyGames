@@ -69,7 +69,7 @@ public class PlayerAttack : MonoBehaviour
     private void Attack1()
     {
         //왼쪽 마우스 클릭 - 기본 공격
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetMouseButtonDown(0))
         {
             if (playerState.state == EPlayerState.Idle
                 || playerState.state == EPlayerState.Run)
@@ -99,7 +99,7 @@ public class PlayerAttack : MonoBehaviour
     private void Attack2()
     {
         //왼쪽 마우스 클릭 - 추가 공격
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetMouseButtonDown(0))
         {
             //추가 공격 타이밍 체크! 
             if (attack1Timer > attack1Time * 0.75 && attack1Timer < attack1Time)
