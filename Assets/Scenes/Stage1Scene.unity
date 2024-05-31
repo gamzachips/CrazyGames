@@ -635,6 +635,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1273656703}
     m_Modifications:
+    - target: {fileID: 357968005850632815, guid: 23c4f91d5f817bc46a4de09deac06c8b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 067fdffb68635304a904b3f0c156e6f8, type: 3}
     - target: {fileID: 3281244137073987137, guid: 23c4f91d5f817bc46a4de09deac06c8b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -735,6 +739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BugReportButton
       objectReference: {fileID: 0}
+    - target: {fileID: 9115088028577194373, guid: 23c4f91d5f817bc46a4de09deac06c8b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 62f190aa4e754884994797fb20dc6f60, type: 3}
     m_RemovedComponents:
     - {fileID: 3413965006942899083, guid: 23c4f91d5f817bc46a4de09deac06c8b, type: 3}
     m_RemovedGameObjects: []
