@@ -25,10 +25,14 @@ public class PlayerAttack : MonoBehaviour
         animator = player.GetComponent<Animator>();
         sRenderer = player.GetComponent<SpriteRenderer>();  
         attackCollider = GetComponent<BoxCollider2D>();
+
+        attackCollider.size = new Vector2(2f, 1.5f);
     }
    
     void Update()
     {
+        transform.position = player.transform.position;
+
         MoveCollider();
         Attack1();
         Attack2();
@@ -54,11 +58,11 @@ public class PlayerAttack : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (mousePos.x < player.transform.position.x) //플레이어 왼쪽 클릭
         {
-            attackCollider.offset = new Vector2(-50, 0); //공격 콜라이더 오프셋
+            attackCollider.offset = new Vector2(-0.6f, 0); //공격 콜라이더 오프셋
         }
         else //플레이어 오른쪽 클릭
         {
-            attackCollider.offset = new Vector2(50, 0); //공격 콜라이더 오프셋
+            attackCollider.offset = new Vector2(0.6f, 0); //공격 콜라이더 오프셋
         }
     }
 
