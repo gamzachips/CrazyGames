@@ -9,12 +9,12 @@ public class PlayerMove : MonoBehaviour
     float moveSpeed = 1.0f;
 
     Animator animator;
-    SpriteRenderer renderer;
+    SpriteRenderer sRenderer;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        renderer = GetComponent<SpriteRenderer>();
+        sRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -49,11 +49,11 @@ public class PlayerMove : MonoBehaviour
             animator.SetTrigger("Move");
             if (moveDir.x < 0)
             {
-                renderer.flipX = true;
+                sRenderer.flipX = true;
             }
             else if (moveDir.x > 0)
             {
-                renderer.flipX = false;
+                sRenderer.flipX = false;
             }
         }
 

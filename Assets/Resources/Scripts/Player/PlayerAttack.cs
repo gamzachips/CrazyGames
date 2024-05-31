@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    Animator animator;
+    SpriteRenderer sRenderer;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        sRenderer = GetComponent<SpriteRenderer>();
+    }
+   
     void Update()
     {
-        
+        //왼쪽 마우스 - 기본 공격
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            animator.SetTrigger("Attack1");
+        }
     }
 }
