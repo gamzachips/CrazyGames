@@ -31,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
     {
         MoveCollider();
         Attack1();
-
+        Attack2();
 
 
         //일반공격 상태 해제 
@@ -44,7 +44,6 @@ public class PlayerAttack : MonoBehaviour
                 playerState.state = EPlayerState.Idle;
             }
         }
-
     }
 
 
@@ -87,6 +86,40 @@ public class PlayerAttack : MonoBehaviour
                 {
 
                 }
+            }
+
+        }
+    }
+
+    private void Attack2()
+    {
+        //왼쪽 마우스 클릭 - 추가 공격
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (playerState.state != EPlayerState.Attack1)
+                return;
+
+            //추가 공격 타이밍 체크! 
+            if(attack1Timer > attack1Time * 0.75 && attack1Timer < attack1Time)
+            {
+                animator.SetTrigger("Attack2");// 공격 애니메이션 재생
+                playerState.state = EPlayerState.Attack2;
+
+                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                if (mousePos.x < player.transform.position.x) //플레이어 왼쪽 클릭
+                {
+                    sRenderer.flipX = true; //플레이어 반전
+                }
+                else //플레이어 오른쪽 클릭
+                {
+                    sRenderer.flipX = false;
+                }
+
+                if (targetMonster) //충돌중인 몬스터가 있으면
+                {
+
+                }
+
             }
 
         }
