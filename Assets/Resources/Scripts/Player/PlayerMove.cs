@@ -9,10 +9,12 @@ public class PlayerMove : MonoBehaviour
     float moveSpeed = 1.0f;
 
     Animator animator;
+    SpriteRenderer renderer;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -37,10 +39,22 @@ public class PlayerMove : MonoBehaviour
         }
 
         moveDir = moveDir.normalized;
-        animator.SetFloat("Xspeed", moveDir.x); 
+
         if(moveDir == Vector2.zero )
         {
             animator.SetTrigger("Stop");
+        }
+        else
+        {
+            animator.SetTrigger("Move");
+            if (moveDir.x < 0)
+            {
+                renderer.flipX = true;
+            }
+            else if (moveDir.x > 0)
+            {
+                renderer.flipX = false;
+            }
         }
 
         transform.Translate(moveDir * moveSpeed * Time.deltaTime); 
