@@ -647,6 +647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4146701883644306811, guid: 23c4f91d5f817bc46a4de09deac06c8b, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7303501733172641388, guid: 23c4f91d5f817bc46a4de09deac06c8b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -8,6 +8,13 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float moveSpeed = 1.0f;
 
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         Vector2 moveDir = Vector2.zero;
@@ -30,6 +37,11 @@ public class PlayerMove : MonoBehaviour
         }
 
         moveDir = moveDir.normalized;
+        animator.SetFloat("Xspeed", moveDir.x); 
+        if(moveDir == Vector2.zero )
+        {
+            animator.SetTrigger("Stop");
+        }
 
         transform.Translate(moveDir * moveSpeed * Time.deltaTime); 
     }
