@@ -1467,7 +1467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1409700197}
   - component: {fileID: 1409700195}
-  - component: {fileID: 1409700194}
+  - component: {fileID: 1409700200}
   - component: {fileID: 1409700198}
   - component: {fileID: 1409700199}
   m_Layer: 0
@@ -1477,18 +1477,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1409700194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409700193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98a241799981434ea7860d19cc8052e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1409700195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,6 +1579,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1409700200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409700193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6a40016692fa647b1c707810a67a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
 --- !u!1 &1475667757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,6 +1838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900169981}
   - component: {fileID: 1900169980}
+  - component: {fileID: 1900169982}
   m_Layer: 0
   m_Name: PlayerAttack
   m_TagString: Untagged
@@ -1904,6 +1906,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1900169982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900169979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c98a241799981434ea7860d19cc8052e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack1Time: 0.5
 --- !u!1 &1937050900
 GameObject:
   m_ObjectHideFlags: 0
