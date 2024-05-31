@@ -35,7 +35,8 @@ public class PlayerAttack : MonoBehaviour
 
 
         //일반공격 상태 해제 
-        if(playerState.state == EPlayerState.Attack1)
+        if(playerState.state == EPlayerState.Attack1
+            || playerState.state == EPlayerState.Attack2)
         {
             attack1Timer += Time.deltaTime;
             if(attack1Timer > attack1Time)
@@ -96,14 +97,12 @@ public class PlayerAttack : MonoBehaviour
         //왼쪽 마우스 클릭 - 추가 공격
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (playerState.state != EPlayerState.Attack1)
-                return;
-
             //추가 공격 타이밍 체크! 
-            if(attack1Timer > attack1Time * 0.75 && attack1Timer < attack1Time)
+            if (attack1Timer > attack1Time * 0.75 && attack1Timer < attack1Time)
             {
                 animator.SetTrigger("Attack2");// 공격 애니메이션 재생
                 playerState.state = EPlayerState.Attack2;
+                attack1Timer = 0f;
 
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 if (mousePos.x < player.transform.position.x) //플레이어 왼쪽 클릭
@@ -119,9 +118,7 @@ public class PlayerAttack : MonoBehaviour
                 {
 
                 }
-
             }
-
         }
     }
 
