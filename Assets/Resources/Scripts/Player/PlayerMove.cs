@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (playerState.state == EPlayerState.Attack1 || playerState.state == EPlayerState.Attack2)
             return;
@@ -69,6 +69,6 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        rigid.MovePosition(transform.position + moveDir * moveSpeed * Time.deltaTime);
+        rigid.MovePosition(transform.position + moveDir * moveSpeed * Time.fixedDeltaTime);
     }
 }
