@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2192059009111035129}
   - component: {fileID: 6336479730532427710}
   - component: {fileID: 7557861619373672248}
+  - component: {fileID: 5129183591377936256}
   - component: {fileID: 1197790989211272577}
   - component: {fileID: 8599653849004990929}
   - component: {fileID: 4340567827118048480}
@@ -33,7 +34,8 @@ Transform:
   m_LocalPosition: {x: -1.2091889, y: -0.83257055, z: 0.2098966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 946523698683882444}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6336479730532427710
@@ -70,6 +72,19 @@ MonoBehaviour:
   hitTime: 0.5
   attackCoolTime: 2
   attackTime: 0.7
+--- !u!114 &5129183591377936256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503500151800761899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223777e01bbc92843975450d2b9864fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 3
 --- !u!95 &1197790989211272577
 Animator:
   serializedVersion: 5
@@ -188,3 +203,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
+--- !u!1 &5333654370957443928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 946523698683882444}
+  m_Layer: 0
+  m_Name: MonsterAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &946523698683882444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333654370957443928}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2192059009111035129}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

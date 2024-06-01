@@ -83,7 +83,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                 }
                 hitTimer = 0f;
             }
-            else return;
+            return;
         }
         
         //스폰위치에 있으면 Idle 상태로 변경

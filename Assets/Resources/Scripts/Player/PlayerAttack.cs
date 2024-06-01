@@ -89,7 +89,7 @@ public class PlayerAttack : MonoBehaviour
 
                 if (targetMonster) //충돌중인 몬스터가 있으면
                 {
-
+                    targetMonster.GetComponent<MonsterHp>().GetDamage();
                 }
             }
 
@@ -120,7 +120,7 @@ public class PlayerAttack : MonoBehaviour
 
                 if (targetMonster) //충돌중인 몬스터가 있으면
                 {
-
+                    targetMonster.GetComponent<MonsterHp>().GetDamage();
                 }
             }
         }
