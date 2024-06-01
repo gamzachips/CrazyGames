@@ -20,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
     //Hit
     [SerializeField]
-    float hitTime = 0.3f;
+    float hitTime = 0.7f;
     float hitTimer = 0f;
 
     private void Start()

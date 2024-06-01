@@ -57,15 +57,18 @@ public class MonsterAttackCheck : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isColliding == false)
+            return;
+
         if (monsterState.state == EMonsterState.Attack)
         {
             if (playerState.state == EPlayerState.Hit
                 || playerState.state == EPlayerState.Die)
                 return;
 
-            damageTimer += Time.deltaTime;
-            if (damageTimer < damageTime) return;
-            damageTimer = 0f;
+            //damageTimer += Time.deltaTime;
+            //if (damageTimer < damageTime) return;
+            //damageTimer = 0f;
 
             PlayerHp playerHp = player.GetComponent<PlayerHp>();
 
