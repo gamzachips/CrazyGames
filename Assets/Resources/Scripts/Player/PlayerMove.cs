@@ -14,12 +14,14 @@ public class PlayerMove : MonoBehaviour
     Animator animator;
     SpriteRenderer sRenderer;
     PlayerState playerState;
+    Rigidbody2D rigid;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         sRenderer = GetComponent<SpriteRenderer>();
-        playerState = GetComponent<PlayerState>();  
+        playerState = GetComponent<PlayerState>();
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -27,7 +29,7 @@ public class PlayerMove : MonoBehaviour
         if (playerState.state == EPlayerState.Attack1 || playerState.state == EPlayerState.Attack2)
             return;
 
-        Vector2 moveDir = Vector2.zero;
+        Vector3 moveDir = Vector3.zero;
 
         if(Input.GetKey(KeyCode.W))
         {
@@ -48,7 +50,7 @@ public class PlayerMove : MonoBehaviour
 
         moveDir = moveDir.normalized;
 
-        if(moveDir == Vector2.zero )
+        if(moveDir == Vector3.zero )
         {
             animator.SetTrigger("Stop");
             playerState.state = EPlayerState.Idle;
@@ -67,6 +69,6 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        transform.Translate(moveDir * moveSpeed * Time.deltaTime);
+        rigid.MovePosition(transform.position + moveDir * moveSpeed * Time.deltaTime);
     }
 }
