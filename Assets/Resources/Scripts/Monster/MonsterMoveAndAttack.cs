@@ -237,17 +237,17 @@ public class MonsterMoveAndAttack : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnCollisionEnter2D(Collision2D collider)
     {
-        if(collider.CompareTag("Player"))
+        if(collider.gameObject.CompareTag("Player"))
         {
             isColliding = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collider)
+    private void OnCollisionExit2D(Collision2D collider)
     {
-        if (collider.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             isColliding = false;
         }

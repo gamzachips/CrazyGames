@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -12,11 +13,15 @@ public class PlayerAttack : MonoBehaviour
 
     GameObject targetMonster;
 
+    //Attack
     [SerializeField]
     float attack1Time = 0.5f;
-
-
     float attack1Timer = 0f;
+
+    //Hit
+    [SerializeField]
+    float hitTime = 0.3f;
+    float hitTimer = 0f;
 
     private void Start()
     {
@@ -31,6 +36,32 @@ public class PlayerAttack : MonoBehaviour
    
     void Update()
     {
+        if (playerState.state == EPlayerState.Die)
+        {
+            animator.SetTrigger("Die");
+            return;
+        }
+
+        //Hit 상태 처리
+        if (playerState.state == EPlayerState.Hit)
+        {
+            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+            {
+                animator.SetTrigger("Hit");
+            }
+            hitTimer += Time.deltaTime;
+            if (hitTimer > hitTime)
+            {
+                playerState.state = EPlayerState.Idle;
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                {
+                    animator.SetTrigger("Idle");
+                }
+                hitTimer = 0f;
+            }
+            return;
+        }
+
         transform.position = player.transform.position;
 
         MoveCollider();

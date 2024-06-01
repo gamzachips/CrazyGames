@@ -1462,6 +1462,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 346939932343006536, guid: 0f97d386a959a6c40a06865394759bfd, type: 3}
   m_PrefabInstance: {fileID: 5804431636198546266}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1409700203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409700193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2743dcf5899a1454aacdae4aaee11827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 3
+  hp: 3
 --- !u!1 &1475667757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,6 +1915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CaveBat
       objectReference: {fileID: 0}
+    - target: {fileID: 1412289276971897015, guid: aa297e008890d6a4cacd281477d73805, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3588943264845043886, guid: aa297e008890d6a4cacd281477d73805, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.56
@@ -2239,7 +2257,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 346939932343006536, guid: 0f97d386a959a6c40a06865394759bfd, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 1409700203}
   m_SourcePrefab: {fileID: 100100000, guid: 0f97d386a959a6c40a06865394759bfd, type: 3}
 --- !u!1001 &8977661277590900208
 PrefabInstance:

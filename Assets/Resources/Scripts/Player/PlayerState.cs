@@ -8,6 +8,24 @@ public class PlayerState : MonoBehaviour
 {
     
     public EPlayerState state = EPlayerState.Idle;
+
+    //Die Check
+    [SerializeField]
+    float dieTime = 0.7f;
+
+    float dieTimer = 0f;
+
+    private void Update()
+    {
+        if (state == EPlayerState.Die)
+        {
+            dieTimer += Time.deltaTime;
+            if (dieTimer > dieTime)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }
 
 public enum EPlayerState
