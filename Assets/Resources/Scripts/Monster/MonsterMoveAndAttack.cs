@@ -90,6 +90,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
         if(Vector3.Distance(transform.position, spawnPos) < spawnPosRange)
         {
             monsterState.state = EMonsterState.Idle;
+            animator.SetTrigger("Idle");
         }
 
 
@@ -120,6 +121,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                             if(monsterState.state == EMonsterState.Chase)
                             {
                                 monsterState.state = EMonsterState.Idle;
+                                animator.SetTrigger("Idle");
                             }
                         }
                         else //플레이어와 충돌 중이 아니라면
@@ -130,6 +132,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                                 if(monsterState.state == EMonsterState.Idle)
                                 {
                                     monsterState.state = EMonsterState.Chase;
+                                    animator.SetTrigger("Move");
                                 }
                             }
                         }
@@ -138,12 +141,14 @@ public class MonsterMoveAndAttack : MonoBehaviour
                     else if(Vector3.Distance(transform.position, spawnPos) > spawnPosRange) //스폰 위치에 없으면 돌아간다.
                     {
                         monsterState.state = EMonsterState.Return;
+                        animator.SetTrigger("Move");
                     }
 
                     //리턴 범위를 넘어갔으면 돌아간다.
                     if(Vector3.Distance(transform.position, spawnPos) > returnRange)
                     {
                         monsterState.state = EMonsterState.Return;
+                        animator.SetTrigger("Move");
                     }
 
                     //상태에 따라 움직인다.
