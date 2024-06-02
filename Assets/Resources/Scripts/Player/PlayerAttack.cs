@@ -13,6 +13,9 @@ public class PlayerAttack : MonoBehaviour
 
     GameObject targetMonster;
 
+    [SerializeField]
+    GameObject skillPrefab;
+
     //Attack
     [SerializeField]
     float attack1Time = 0.5f;
@@ -61,7 +64,7 @@ public class PlayerAttack : MonoBehaviour
         MoveCollider();
         Attack1();
         Attack2();
-
+        Skill();
 
         //일반공격 상태 해제 
         if(playerState.state == EPlayerState.Attack1
@@ -114,7 +117,7 @@ public class PlayerAttack : MonoBehaviour
 
                 if (targetMonster) //충돌중인 몬스터가 있으면
                 {
-                    targetMonster.GetComponent<MonsterHp>().GetDamage();
+                    targetMonster.GetComponent<MonsterHp>().GetDamage(1);
                 }
             }
 
@@ -145,8 +148,41 @@ public class PlayerAttack : MonoBehaviour
 
                 if (targetMonster) //충돌중인 몬스터가 있으면
                 {
-                    targetMonster.GetComponent<MonsterHp>().GetDamage();
+                    targetMonster.GetComponent<MonsterHp>().GetDamage(1);
                 }
+            }
+        }
+    }
+
+    private void Skill()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (playerState.state == EPlayerState.Idle
+                || playerState.state == EPlayerState.Run)
+            {
+                animator.SetTrigger("Skill");// 공격 애니메이션 재생
+                playerState.state = EPlayerState.Skill;
+
+                GameObject skillObject = Instantiate(skillPrefab);
+                skillObject.transform.SetParent(transform.parent);
+                SpriteRenderer skillRenderer = skillObject.GetComponent<SpriteRenderer>();
+
+                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                if (mousePos.x < player.transform.position.x) //플레이어 왼쪽 클릭
+                {
+                    sRenderer.flipX = true; //플레이어 반전
+                    skillObject.transform.position = transform.position + new Vector3(-0.5f, 0.5f);
+                    skillRenderer.flipX = true;
+                }
+                else //플레이어 오른쪽 클릭
+                {
+                    sRenderer.flipX = false;
+                    skillObject.transform.position = transform.position + new Vector3(0.5f, 0.5f);
+                    skillRenderer.flipX = false;
+                }
+
+
             }
         }
     }

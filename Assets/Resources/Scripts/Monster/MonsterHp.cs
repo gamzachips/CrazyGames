@@ -16,9 +16,9 @@ public class MonsterHp : MonoBehaviour
         hp = maxHp;
     }
 
-    public void GetDamage()
+    public void GetDamage(int damage)
     {
-        hp--;
+        hp -= damage;
         gameObject.GetComponent<MonsterState>().state = EMonsterState.Hit;
         if (hp <= 0 )
         {
