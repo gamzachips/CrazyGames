@@ -12,13 +12,24 @@ public class PlayerAttack : MonoBehaviour
     BoxCollider2D attackCollider;
     SpriteRenderer sRenderer;
 
-    GameObject targetMonster;
     public GameObject bugPlayer;
+
+    [SerializeField]
+    GameObject skillPrefab;
 
     //Attack
     [SerializeField]
     float attack1Time = 0.5f;
     float attack1Timer = 0f;
+
+    //Skill
+    [SerializeField]
+    float skillTime = 0.9f;
+    float skillTimer = 0f;
+
+    [SerializeField]
+    float skillCoolTime = 5f;
+    float skillCoolTimer = 5f;
 
     //Hit
     [SerializeField]
@@ -63,6 +74,9 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+
+        skillCoolTimer += Time.deltaTime;
+
         if (playerState.state == EPlayerState.Die)
         {
             animator.SetTrigger("Die");
@@ -94,6 +108,7 @@ public class PlayerAttack : MonoBehaviour
         MoveCollider();
         Attack1();
         Attack2();
+        Skill();
 
         //일반공격 상태 해제 
         if (playerState.state == EPlayerState.Attack1
@@ -103,6 +118,16 @@ public class PlayerAttack : MonoBehaviour
             if(attack1Timer > attack1Time)
             {
                 attack1Timer = 0f;
+                playerState.state = EPlayerState.Idle;
+            }
+        }
+
+         if (playerState.state == EPlayerState.Skill)
+        {
+            skillTimer += Time.deltaTime;
+            if (skillTimer > skillTime)
+            {
+                skillTimer = 0f;
                 playerState.state = EPlayerState.Idle;
             }
         }
@@ -149,11 +174,6 @@ public class PlayerAttack : MonoBehaviour
                 {
                     sRenderer.flipX = false;
                 }
-
-                if (targetMonster) //충돌중인 몬스터가 있으면
-                {
-                    targetMonster.GetComponent<MonsterHp>().GetDamage();
-                }
             }
 
         }
@@ -180,21 +200,43 @@ public class PlayerAttack : MonoBehaviour
                 {
                     sRenderer.flipX = false;
                 }
-
-                if (targetMonster) //충돌중인 몬스터가 있으면
-                {
-                    targetMonster.GetComponent<MonsterHp>().GetDamage();
-                }
             }
         }
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Skill()
     {
-        if (collision.CompareTag("Monster") == false)
+        if (skillCoolTimer < skillCoolTime)
             return;
 
-        targetMonster = collision.gameObject;
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (playerState.state == EPlayerState.Idle
+                || playerState.state == EPlayerState.Run)
+            {
+
+                skillCoolTimer = 0f;
+
+                animator.SetTrigger("Skill");// 공격 애니메이션 재생
+                playerState.state = EPlayerState.Skill;
+
+                GameObject skillObject = Instantiate(skillPrefab);
+                SpriteRenderer skillRenderer = skillObject.GetComponent<SpriteRenderer>();
+
+                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                if (mousePos.x < player.transform.position.x) //플레이어 왼쪽 클릭
+                {
+                    sRenderer.flipX = true; //플레이어 반전
+                    skillObject.transform.position = transform.position + new Vector3(-0.5f, 0.5f);
+                    skillRenderer.flipX = true;
+                }
+                else //플레이어 오른쪽 클릭
+                {
+                    sRenderer.flipX = false;
+                    skillObject.transform.position = transform.position + new Vector3(0.5f, 0.5f);
+                    skillRenderer.flipX = false;
+                }
+            }
+        }
     }
 
     private void PlayerCopyBug()
