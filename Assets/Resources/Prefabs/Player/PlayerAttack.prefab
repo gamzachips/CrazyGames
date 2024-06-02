@@ -90,4 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98a241799981434ea7860d19cc8052e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bugPlayer: {fileID: 0}
+  skillPrefab: {fileID: 0}
   attack1Time: 0.5
+  skillTime: 0.9
+  skillCoolTime: 5
+  hitTime: 0.7
+  copyBugCount: 0

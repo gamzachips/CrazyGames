@@ -42,10 +42,10 @@ public class PlayerAttack : MonoBehaviour
 
     Vector2[] copyBugPos = new Vector2[] // 플레이어와 버그플레이어 간의 거리 : Vector2 배열 초기화
     {
-            new Vector2(-80, 0),
-            new Vector2(80, 0),
-            new Vector2(-160, 0),
-            new Vector2(160, 0)
+            new Vector2(-0.8f, 0),
+            new Vector2(0.8f, 0),
+            new Vector2(-1.6f, 0),
+            new Vector2(1.6f, 0)
     };
 
     [SerializeField]
@@ -156,6 +156,7 @@ public class PlayerAttack : MonoBehaviour
             if (playerState.state == EPlayerState.Idle
                 || playerState.state == EPlayerState.Run)
             {
+                // 버그 1-1 추가 (이동키 누르며 공격 할 경우, 위치 버그 있음)
                 PlayerCopyBug();
 
                 animator.SetTrigger("Attack1");// 공격 애니메이션 재생
