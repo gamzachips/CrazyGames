@@ -11,7 +11,7 @@ public class PlayerState : MonoBehaviour
 
     //Die Check
     [SerializeField]
-    float dieTime = 0.7f;
+    float dieTime = 0.9f;
 
     float dieTimer = 0f;
 

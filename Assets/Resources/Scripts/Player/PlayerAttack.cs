@@ -20,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
     //Hit
     [SerializeField]
-    float hitTime = 0.7f;
+    float hitTime = 0.3f;
     float hitTimer = 0f;
 
     private void Start()
@@ -38,17 +38,11 @@ public class PlayerAttack : MonoBehaviour
     {
         if (playerState.state == EPlayerState.Die)
         {
-            animator.SetTrigger("Die");
             return;
         }
-
         //Hit 상태 처리
         if (playerState.state == EPlayerState.Hit)
         {
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
-            {
-                animator.SetTrigger("Hit");
-            }
             hitTimer += Time.deltaTime;
             if (hitTimer > hitTime)
             {

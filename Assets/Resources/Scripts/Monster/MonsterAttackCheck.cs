@@ -12,7 +12,7 @@ public class MonsterAttackCheck : MonoBehaviour
     BoxCollider2D attackCollider;
 
     [SerializeField]
-    float damageTime = 0.7f;
+    float damageTime = 0.5f;
 
     float damageTimer = 0f;
 
@@ -66,9 +66,9 @@ public class MonsterAttackCheck : MonoBehaviour
                 || playerState.state == EPlayerState.Die)
                 return;
 
-            //damageTimer += Time.deltaTime;
-            //if (damageTimer < damageTime) return;
-            //damageTimer = 0f;
+            damageTimer += Time.deltaTime;
+            if (damageTimer < damageTime) return;
+            damageTimer = 0f;
 
             PlayerHp playerHp = player.GetComponent<PlayerHp>();
 
