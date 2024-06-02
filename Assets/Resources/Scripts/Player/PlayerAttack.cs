@@ -86,10 +86,6 @@ public class PlayerAttack : MonoBehaviour
         //Hit 상태 처리
         if (playerState.state == EPlayerState.Hit)
         {
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
-            {
-                animator.SetTrigger("Hit");
-            }
             hitTimer += Time.deltaTime;
             if (hitTimer > hitTime)
             {

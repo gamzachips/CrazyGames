@@ -2166,7 +2166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5942027423590328672, guid: aa297e008890d6a4cacd281477d73805, type: 3}
       propertyPath: damageTime
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2487,12 +2487,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6910701402270091138, guid: 0e34be8b28bd0dd488a7c98015f09ecd, type: 3}
       propertyPath: hitTime
-      value: 0.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6910701402270091138, guid: 0e34be8b28bd0dd488a7c98015f09ecd, type: 3}
       propertyPath: bugPlayer
       value: 
       objectReference: {fileID: 92119100131788140, guid: 8d9fa222d1c84904fafa4f501b8d3623, type: 3}
+    - target: {fileID: 6910701402270091138, guid: 0e34be8b28bd0dd488a7c98015f09ecd, type: 3}
+      propertyPath: skillPrefab
+      value: 
+      objectReference: {fileID: 8852335637442140111, guid: 7f9408667d1511f489927c145251e7fa, type: 3}
     - target: {fileID: 8150071016547842038, guid: 0e34be8b28bd0dd488a7c98015f09ecd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.974732
