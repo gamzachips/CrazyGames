@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  dieTime: 0.7
 --- !u!95 &6839017365990462584
 Animator:
   serializedVersion: 5
