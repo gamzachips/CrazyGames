@@ -190,7 +190,9 @@ public class PlayerAttack : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Monster") == false)
-            return;
+        {
+            targetMonster = null;
+        }
 
         targetMonster = collision.gameObject;
     }
