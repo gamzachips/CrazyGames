@@ -53,6 +53,7 @@ public class MonsterAttackCheck : MonoBehaviour
             if (damageTimer < damageTime) return;
             damageTimer = 0f;
 
+
             PlayerHp playerHp = player.GetComponent<PlayerHp>();
 
             playerHp.GetDamage();

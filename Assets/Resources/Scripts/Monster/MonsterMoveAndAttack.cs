@@ -107,10 +107,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                 if(Vector3.Distance(transform.position, player.transform.position) < attackRange)
                 {
                     //공격한다
-                    if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-                    {
-                        animator.SetTrigger("Attack");
-                    }
+                    animator.SetTrigger("Attack");
                     monsterState.state = EMonsterState.Attack;
                 }
                 else //공격 범위 내에 없으면 
