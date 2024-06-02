@@ -9,6 +9,8 @@ public class MonsterHp : MonoBehaviour
 
     int hp = 3;
 
+    public int HP {  get { return hp; } set {  hp = value; } }
+
     private void Start()
     {
         hp = maxHp;

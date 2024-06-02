@@ -9,6 +9,8 @@ public class PlayerHp : MonoBehaviour
     [SerializeField]
     int hp = 3;
 
+    public int HP {  get { return hp; } set {  hp = value; } }
+
     Animator animator;
 
     private void Start()
