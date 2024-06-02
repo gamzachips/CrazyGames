@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7747b0c01f01a8c429f4f1d7c9513db2
+guid: a6adb9ec6f148a148bab87cc26213eae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,19 +94,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bat_0
+      name: Bat_Right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3723ec170f979fa458d9eafe55f99ae9
-      internalID: -896707021
+      spriteID: 8973937de30e7574c93eb51d5c7b24af
+      internalID: -1649229073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_1
+      name: Bat_Right_1
       rect:
         serializedVersion: 2
         x: 96
@@ -158,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cc2d85153a51bb4e8cf07e5ea33bbda
-      internalID: -138396148
+      spriteID: 5629543992fd2fb4084ccb15e049165e
+      internalID: 2021264454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_2
+      name: Bat_Right_2
       rect:
         serializedVersion: 2
         x: 192
@@ -179,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47a03ad7e7b575f4eb5d207cdafee86e
-      internalID: -526537775
+      spriteID: c7ff12a479b49fd49a89bc8315ca7e28
+      internalID: 1594787567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_3
+      name: Bat_Right_3
       rect:
         serializedVersion: 2
         x: 288
@@ -200,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b29b52262387aa347b0e033db8da7f76
-      internalID: -2077818627
+      spriteID: 974154d4c38ff444e9fe2040f6c4dc50
+      internalID: 2105197296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_4
+      name: Bat_Right_4
       rect:
         serializedVersion: 2
         x: 384
@@ -221,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4f2d34e16b7cb84aaf0666ebfad90dc
-      internalID: -690931470
+      spriteID: 26dbec57b2b96804e8fee4e6d61d7987
+      internalID: 476159642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_5
+      name: Bat_Right_5
       rect:
         serializedVersion: 2
         x: 480
@@ -242,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dae0270a56a080248867dee0540176e9
-      internalID: -674793119
+      spriteID: 0a8412d1cd06a2f45a746a0cb3854d60
+      internalID: 96892910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_6
+      name: Bat_Right_6
       rect:
         serializedVersion: 2
         x: 576
@@ -263,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f318a1d319bfbf042a372a1353b72b7d
-      internalID: 316905485
+      spriteID: df8364b7c27495c4585dd9002f864ec5
+      internalID: 722072470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_7
+      name: Bat_Right_7
       rect:
         serializedVersion: 2
         x: 672
@@ -284,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 442126b00d512604ea24c1c3135a7d8a
-      internalID: 125721731
+      spriteID: ecba9bd788a719f4db5165292928733f
+      internalID: 1548470157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_8
+      name: Bat_Right_8
       rect:
         serializedVersion: 2
         x: 0
@@ -305,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b4c6319fdcf01c4aa681fcb06578bd9
-      internalID: 321518384
+      spriteID: afd112d97a7d0be4d958c207d34878b6
+      internalID: -973418335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_9
+      name: Bat_Right_9
       rect:
         serializedVersion: 2
         x: 96
@@ -326,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb0901e5febc76447b15ca187801c400
-      internalID: 2038640188
+      spriteID: 877623717cef65a4fa7cad9605b85fd0
+      internalID: -1965414372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_10
+      name: Bat_Right_10
       rect:
         serializedVersion: 2
         x: 192
@@ -347,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d682bd960968caf40a695dc843929f0b
-      internalID: -1419505643
+      spriteID: 3e140b2fd1d229b4286fa197c98c3048
+      internalID: -999538676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_11
+      name: Bat_Right_11
       rect:
         serializedVersion: 2
         x: 288
@@ -368,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd340a4f82456e94f8d02808606e6ec5
-      internalID: 435954422
+      spriteID: 07f36ae5441dfbb4cb36eabe51c3ec9d
+      internalID: 2136010477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_12
+      name: Bat_Right_12
       rect:
         serializedVersion: 2
         x: 384
@@ -389,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fa8d086eb9aaa54e8077d97c9b33811
-      internalID: -1606899842
+      spriteID: c2396d0f0697c8140b7a7bde5db3ab5d
+      internalID: 173249977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_13
+      name: Bat_Right_13
       rect:
         serializedVersion: 2
         x: 480
@@ -410,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8334329d73a8d14393f3422883de1af
-      internalID: 1014897256
+      spriteID: 7ff7f09cf76b1e24eb4c28528ab157b2
+      internalID: 1488521530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_14
+      name: Bat_Right_14
       rect:
         serializedVersion: 2
         x: 576
@@ -431,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1db2b0c5915e784c8ba7d6d250ccdf5
-      internalID: 502535533
+      spriteID: 339a62f5e1a4ffd40b849b388ac7aa91
+      internalID: -1471387991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_15
+      name: Bat_Right_15
       rect:
         serializedVersion: 2
         x: 672
@@ -452,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9aefcec0b2b18f4e8c548b340bb9f1f
-      internalID: -611833888
+      spriteID: 89dc1a9230b313747ad1354e42cca1f5
+      internalID: -1086996132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_16
+      name: Bat_Right_16
       rect:
         serializedVersion: 2
         x: 0
@@ -473,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3b142280f55c5a488396d9e52841af8
-      internalID: 1703492943
+      spriteID: 36c169d76d7e26c419d84472f2ac99f2
+      internalID: 1601081011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_17
+      name: Bat_Right_17
       rect:
         serializedVersion: 2
         x: 96
@@ -494,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f27cf05d0c4863b4c815ea0fe87ba342
-      internalID: -185995967
+      spriteID: 96ae050009772f546aaad1a9ec9bbd3e
+      internalID: 652505909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_18
+      name: Bat_Right_18
       rect:
         serializedVersion: 2
         x: 192
@@ -515,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0706b80eac7f514b9489e3ab2dc5417
-      internalID: -722780810
+      spriteID: 98b6f0849670e2f4388e7ce96ec2fab3
+      internalID: 1756582213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_19
+      name: Bat_Right_19
       rect:
         serializedVersion: 2
         x: 288
@@ -536,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a674793167b3724ea9899d4a02c29a0
-      internalID: 257694664
+      spriteID: bce62b5354d16cf498469f5f3c361ef8
+      internalID: -416213684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_20
+      name: Bat_Right_20
       rect:
         serializedVersion: 2
         x: 384
@@ -557,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9b716d57999a646a3deaa566e2bfbc
-      internalID: 1920349175
+      spriteID: 754dcd1c01c42a54ba8a3e695c509941
+      internalID: -423321279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_21
+      name: Bat_Right_21
       rect:
         serializedVersion: 2
         x: 480
@@ -578,14 +565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b875ef649b7032448a6a7523d0c0c590
-      internalID: -1153638381
+      spriteID: 2f857b20a344c0c4b9f1a41e47abfefa
+      internalID: 1645351899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_22
+      name: Bat_Right_22
       rect:
         serializedVersion: 2
         x: 576
@@ -599,14 +586,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8291b44d6f9128b4592fc66e291f346a
-      internalID: 242136773
+      spriteID: c57053bbd7d92ba4caab35c0f8ad35b3
+      internalID: 1975854834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_23
+      name: Bat_Right_23
       rect:
         serializedVersion: 2
         x: 672
@@ -620,14 +607,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ddacd05c7cecdb45b79c00a8f74046f
-      internalID: -2038778712
+      spriteID: ed335f09a46d2364d8684e097801071d
+      internalID: -1812183078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_24
+      name: Bat_Right_24
       rect:
         serializedVersion: 2
         x: 0
@@ -641,14 +628,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ab58949ce17287488a9fdb95f5531c4
-      internalID: -1665767436
+      spriteID: 07c61ec5f8b923a48a5c3d10187a9032
+      internalID: 456153182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_25
+      name: Bat_Right_25
       rect:
         serializedVersion: 2
         x: 96
@@ -662,14 +649,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b82771308e019b4abf9ab72c39f035c
-      internalID: -913208988
+      spriteID: d7d22feeb68743749923ffb43e78204e
+      internalID: 901634068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_26
+      name: Bat_Right_26
       rect:
         serializedVersion: 2
         x: 192
@@ -683,14 +670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ff1d82323712d42aa660e8bad78d22
-      internalID: 1257589294
+      spriteID: 3abd61cc490706b4b9d77fe4f8715163
+      internalID: -1952794189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_27
+      name: Bat_Right_27
       rect:
         serializedVersion: 2
         x: 288
@@ -704,14 +691,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 535ed0ac32570b7479cc23074c3788af
-      internalID: -1930178275
+      spriteID: 03ed75b59d2ae2e479933ffd731ab176
+      internalID: 1262583725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_28
+      name: Bat_Right_28
       rect:
         serializedVersion: 2
         x: 384
@@ -725,14 +712,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37062473c92486a428be80950e951762
-      internalID: -1230963319
+      spriteID: ea29403f6627acf47a909c72d8a07830
+      internalID: 305165414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat_29
+      name: Bat_Right_29
       rect:
         serializedVersion: 2
         x: 480
@@ -746,8 +733,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18c6c3280da74a048901743d872f8bc2
-      internalID: 773676373
+      spriteID: 6b949dfab7864d547b6650096d7a890e
+      internalID: 1141718504
       vertices: []
       indices: 
       edges: []
@@ -763,36 +750,36 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bat_0: -896707021
-      Bat_1: -138396148
-      Bat_10: -1419505643
-      Bat_11: 435954422
-      Bat_12: -1606899842
-      Bat_13: 1014897256
-      Bat_14: 502535533
-      Bat_15: -611833888
-      Bat_16: 1703492943
-      Bat_17: -185995967
-      Bat_18: -722780810
-      Bat_19: 257694664
-      Bat_2: -526537775
-      Bat_20: 1920349175
-      Bat_21: -1153638381
-      Bat_22: 242136773
-      Bat_23: -2038778712
-      Bat_24: -1665767436
-      Bat_25: -913208988
-      Bat_26: 1257589294
-      Bat_27: -1930178275
-      Bat_28: -1230963319
-      Bat_29: 773676373
-      Bat_3: -2077818627
-      Bat_4: -690931470
-      Bat_5: -674793119
-      Bat_6: 316905485
-      Bat_7: 125721731
-      Bat_8: 321518384
-      Bat_9: 2038640188
+      Bat_Right_0: -1649229073
+      Bat_Right_1: 2021264454
+      Bat_Right_10: -999538676
+      Bat_Right_11: 2136010477
+      Bat_Right_12: 173249977
+      Bat_Right_13: 1488521530
+      Bat_Right_14: -1471387991
+      Bat_Right_15: -1086996132
+      Bat_Right_16: 1601081011
+      Bat_Right_17: 652505909
+      Bat_Right_18: 1756582213
+      Bat_Right_19: -416213684
+      Bat_Right_2: 1594787567
+      Bat_Right_20: -423321279
+      Bat_Right_21: 1645351899
+      Bat_Right_22: 1975854834
+      Bat_Right_23: -1812183078
+      Bat_Right_24: 456153182
+      Bat_Right_25: 901634068
+      Bat_Right_26: -1952794189
+      Bat_Right_27: 1262583725
+      Bat_Right_28: 305165414
+      Bat_Right_29: 1141718504
+      Bat_Right_3: 2105197296
+      Bat_Right_4: 476159642
+      Bat_Right_5: 96892910
+      Bat_Right_6: 722072470
+      Bat_Right_7: 1548470157
+      Bat_Right_8: -973418335
+      Bat_Right_9: -1965414372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,7 +12,7 @@ public class MonsterAttackCheck : MonoBehaviour
     BoxCollider2D attackCollider;
 
     [SerializeField]
-    float damageTime = 0.7f;
+    float damageTime = 0.5f;
 
     float damageTimer = 0f;
 
@@ -24,12 +24,40 @@ public class MonsterAttackCheck : MonoBehaviour
         player = GameObject.Find("Player");
         monsterState = monster.GetComponent<MonsterState>();
         playerState = player.GetComponent<PlayerState>();
-        attackCollider = GetComponent<BoxCollider2D>(); 
+        attackCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
+        if (player == null)
+            return;
         MoveCollider();
+    }
+
+
+    void FixedUpdate()
+    {
+        if (player == null)
+            return;
+
+        if (isColliding == false)
+            return;
+
+        if (monsterState.state == EMonsterState.Attack)
+        {
+            if (playerState.state == EPlayerState.Hit
+                || playerState.state == EPlayerState.Die)
+                return;
+
+            damageTimer += Time.deltaTime;
+            if (damageTimer < damageTime) return;
+            damageTimer = 0f;
+
+
+            PlayerHp playerHp = player.GetComponent<PlayerHp>();
+
+            playerHp.GetDamage();
+        }
     }
 
     private void MoveCollider()
@@ -54,26 +82,4 @@ public class MonsterAttackCheck : MonoBehaviour
     {
         isColliding = false;
     }
-
-    void FixedUpdate()
-    {
-        if (isColliding == false)
-            return;
-
-        if (monsterState.state == EMonsterState.Attack)
-        {
-            if (playerState.state == EPlayerState.Hit
-                || playerState.state == EPlayerState.Die)
-                return;
-
-            //damageTimer += Time.deltaTime;
-            //if (damageTimer < damageTime) return;
-            //damageTimer = 0f;
-
-            PlayerHp playerHp = player.GetComponent<PlayerHp>();
-
-            playerHp.GetDamage();
-        }
-    }
-
 }

@@ -9,14 +9,16 @@ public class MonsterHp : MonoBehaviour
 
     int hp = 3;
 
+    public int HP {  get { return hp; } set {  hp = value; } }
+
     private void Start()
     {
         hp = maxHp;
     }
 
-    public void GetDamage()
+    public void GetDamage(int damage)
     {
-        hp--;
+        hp -= damage;
         gameObject.GetComponent<MonsterState>().state = EMonsterState.Hit;
         if (hp <= 0 )
         {

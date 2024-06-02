@@ -54,6 +54,9 @@ public class MonsterMoveAndAttack : MonoBehaviour
 
     void Update()
     {
+        if (player == null)
+            return;
+
         SetFlip();
 
         if (monsterState.state == EMonsterState.Die)
@@ -90,10 +93,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
         if(Vector3.Distance(transform.position, spawnPos) < spawnPosRange)
         {
             monsterState.state = EMonsterState.Idle;
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-            {
-                animator.SetTrigger("Idle");
-            }
+            animator.SetTrigger("Idle");
         }
 
 
@@ -107,10 +107,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                 if(Vector3.Distance(transform.position, player.transform.position) < attackRange)
                 {
                     //공격한다
-                    if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-                    {
-                        animator.SetTrigger("Attack");
-                    }
+                    animator.SetTrigger("Attack");
                     monsterState.state = EMonsterState.Attack;
                 }
                 else //공격 범위 내에 없으면 
@@ -124,10 +121,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                             if(monsterState.state == EMonsterState.Chase)
                             {
                                 monsterState.state = EMonsterState.Idle;
-                                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                                {
-                                    animator.SetTrigger("Idle");
-                                }
+                                animator.SetTrigger("Idle");
                             }
                         }
                         else //플레이어와 충돌 중이 아니라면
@@ -138,10 +132,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                                 if(monsterState.state == EMonsterState.Idle)
                                 {
                                     monsterState.state = EMonsterState.Chase;
-                                    if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                                    {
-                                        animator.SetTrigger("Idle");
-                                    }
+                                    animator.SetTrigger("Move");
                                 }
                             }
                         }
@@ -150,20 +141,14 @@ public class MonsterMoveAndAttack : MonoBehaviour
                     else if(Vector3.Distance(transform.position, spawnPos) > spawnPosRange) //스폰 위치에 없으면 돌아간다.
                     {
                         monsterState.state = EMonsterState.Return;
-                        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                        {
-                            animator.SetTrigger("Idle");
-                        }
+                        animator.SetTrigger("Move");
                     }
 
                     //리턴 범위를 넘어갔으면 돌아간다.
                     if(Vector3.Distance(transform.position, spawnPos) > returnRange)
                     {
                         monsterState.state = EMonsterState.Return;
-                        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                        {
-                            animator.SetTrigger("Idle");
-                        }
+                        animator.SetTrigger("Move");
                     }
 
                     //상태에 따라 움직인다.
@@ -184,10 +169,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
             {
                 attackTimer = 0f;
                 monsterState.state = EMonsterState.Idle;
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                {
-                    animator.SetTrigger("Idle");
-                }
+                animator.SetTrigger("Idle");
                 attackCoolTimer = 0f;
             }
         }
@@ -215,7 +197,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
         if (monsterState.state == EMonsterState.Chase
             || monsterState.state == EMonsterState.Attack)
         {
-            if(transform.position.x < player.transform.position.x)
+            if(transform.position.x > player.transform.position.x)
             {
                 sRenderer.flipX = true;
             }
@@ -226,7 +208,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
         }
         else if (monsterState.state == EMonsterState.Return)
         {
-            if (transform.position.x < spawnPos.x)
+            if (transform.position.x > spawnPos.x)
             {
                 sRenderer.flipX = true;
             }

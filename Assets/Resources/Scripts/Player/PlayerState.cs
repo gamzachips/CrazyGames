@@ -11,7 +11,7 @@ public class PlayerState : MonoBehaviour
 
     //Die Check
     [SerializeField]
-    float dieTime = 0.7f;
+    float dieTime = 0.9f;
 
     float dieTimer = 0f;
 
@@ -22,6 +22,7 @@ public class PlayerState : MonoBehaviour
             dieTimer += Time.deltaTime;
             if (dieTimer > dieTime)
             {
+                Destroy(transform.GetChild(0).gameObject);
                 Destroy(gameObject);
             }
         }

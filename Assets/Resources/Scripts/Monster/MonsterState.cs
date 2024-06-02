@@ -20,6 +20,7 @@ public class MonsterState : MonoBehaviour
             dieTimer += Time.deltaTime;
             if(dieTimer > dieTime)
             {
+                Destroy(gameObject.transform.GetChild(0).gameObject);
                 Destroy(gameObject);
             }
         }
