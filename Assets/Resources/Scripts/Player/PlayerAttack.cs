@@ -21,6 +21,15 @@ public class PlayerAttack : MonoBehaviour
     float attack1Time = 0.5f;
     float attack1Timer = 0f;
 
+    //Skill
+    [SerializeField]
+    float skillTime = 0.9f;
+    float skillTimer = 0f;
+
+    [SerializeField]
+    float skillCoolTime = 5f;
+    float skillCoolTimer = 5f;
+
     //Hit
     [SerializeField]
     float hitTime = 0.3f;
@@ -39,6 +48,8 @@ public class PlayerAttack : MonoBehaviour
    
     void Update()
     {
+        skillCoolTimer += Time.deltaTime;
+
         if (playerState.state == EPlayerState.Die)
         {
             return;
@@ -74,6 +85,16 @@ public class PlayerAttack : MonoBehaviour
             if(attack1Timer > attack1Time)
             {
                 attack1Timer = 0f;
+                playerState.state = EPlayerState.Idle;
+            }
+        }
+
+        if (playerState.state == EPlayerState.Skill)
+        {
+            skillTimer += Time.deltaTime;
+            if (skillTimer > skillTime)
+            {
+                skillTimer = 0f;
                 playerState.state = EPlayerState.Idle;
             }
         }
@@ -156,16 +177,21 @@ public class PlayerAttack : MonoBehaviour
 
     private void Skill()
     {
+        if (skillCoolTimer < skillCoolTime)
+            return;
+
         if (Input.GetMouseButtonDown(1))
         {
             if (playerState.state == EPlayerState.Idle
                 || playerState.state == EPlayerState.Run)
             {
+                
+                skillCoolTimer = 0f;
+
                 animator.SetTrigger("Skill");// 공격 애니메이션 재생
                 playerState.state = EPlayerState.Skill;
 
                 GameObject skillObject = Instantiate(skillPrefab);
-                skillObject.transform.SetParent(transform.parent);
                 SpriteRenderer skillRenderer = skillObject.GetComponent<SpriteRenderer>();
 
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

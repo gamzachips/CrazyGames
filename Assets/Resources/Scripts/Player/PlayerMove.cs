@@ -27,7 +27,8 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate()
     {
         if (playerState.state == EPlayerState.Attack1 || playerState.state == EPlayerState.Attack2
-            || playerState.state == EPlayerState.Hit || playerState.state == EPlayerState.Die )
+            || playerState.state == EPlayerState.Hit || playerState.state == EPlayerState.Die
+            || playerState.state == EPlayerState.Skill)
             return;
 
         Vector3 moveDir = Vector3.zero;

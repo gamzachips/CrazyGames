@@ -18,7 +18,7 @@ public class PlayerSkillAttack : MonoBehaviour
 
     private void Start()
     {
-        flipX = transform.parent.gameObject.GetComponent<SpriteRenderer>().flipX;
+        flipX = GameObject.Find("Player").GetComponent<SpriteRenderer>().flipX;
     }
 
     private void Update()
