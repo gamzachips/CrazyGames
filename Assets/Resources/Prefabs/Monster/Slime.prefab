@@ -148,6 +148,14 @@ PrefabInstance:
       propertyPath: isFirstAttack
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8274140701768887834, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.682
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274140701768887834, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.352
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

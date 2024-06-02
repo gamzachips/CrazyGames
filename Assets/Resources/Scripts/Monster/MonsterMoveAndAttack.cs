@@ -7,6 +7,9 @@ using UnityEngine;
 public class MonsterMoveAndAttack : MonoBehaviour
 {
     [SerializeField]
+    GameObject chasingMark;
+
+    [SerializeField]
     bool isFirstAttack = false;
 
     Animator animator;
@@ -50,6 +53,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
         monsterState = GetComponent<MonsterState>();
         player = GameObject.Find("Player");
         spawnPos = transform.position;
+        chasingMark.SetActive(false);
     }
 
     void Update()
@@ -108,6 +112,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                 {
                     //공격한다
                     animator.SetTrigger("Attack");
+                    chasingMark.SetActive(false);
                     monsterState.state = EMonsterState.Attack;
                 }
                 else //공격 범위 내에 없으면 
@@ -122,6 +127,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                             {
                                 monsterState.state = EMonsterState.Idle;
                                 animator.SetTrigger("Idle");
+                                chasingMark.SetActive(false);
                             }
                         }
                         else //플레이어와 충돌 중이 아니라면
@@ -133,6 +139,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                                 {
                                     monsterState.state = EMonsterState.Chase;
                                     animator.SetTrigger("Move");
+                                    chasingMark.SetActive(true);
                                 }
                             }
                         }
@@ -142,6 +149,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                     {
                         monsterState.state = EMonsterState.Return;
                         animator.SetTrigger("Move");
+                        chasingMark.SetActive(false);
                     }
 
                     //리턴 범위를 넘어갔으면 돌아간다.
@@ -149,6 +157,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
                     {
                         monsterState.state = EMonsterState.Return;
                         animator.SetTrigger("Move");
+                        chasingMark.SetActive(false);
                     }
 
                     //상태에 따라 움직인다.
