@@ -22,6 +22,7 @@ public class MonsterHp : MonoBehaviour
         gameObject.GetComponent<MonsterState>().state = EMonsterState.Hit;
         if (hp <= 0 )
         {
+            hp = 0;
             gameObject.GetComponent<MonsterState>().state = EMonsterState.Die;
         }
     }
