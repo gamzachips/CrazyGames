@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2848ab23fba595b4ea8cb7ee0341b330, type: 2}
+  m_Motion: {fileID: 7400000, guid: 43a18e7dfbc669e4584b26fc8eb140ce, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -107,7 +107,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BatAnimController
+  m_Name: SlimeAnimController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Idle
@@ -251,7 +251,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: dbe5ab7a854554e489197c1d91a40786, type: 2}
+  m_Motion: {fileID: 7400000, guid: 760f1138886b19749b9a7150a3866eef, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -280,7 +280,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 1
-  m_Motion: {fileID: 7400000, guid: 9fa436fa765938a45901d20d5a8355f6, type: 2}
+  m_Motion: {fileID: 7400000, guid: 042bb54dd5cf4b443ab2fa849a3d0569, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -357,7 +357,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 1
-  m_Motion: {fileID: 7400000, guid: 05a36acaddc89c345afa58a94d6c4c1d, type: 2}
+  m_Motion: {fileID: 7400000, guid: aa57ad06b25f6644f8ecb6420bd22cca, type: 2}
   m_Tag: 
   m_SpeedParameter: time
   m_MirrorParameter: 

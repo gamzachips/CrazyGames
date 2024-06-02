@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1197790989211272577, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 60b512e80789d7a41963d93349e3f3d8, type: 2}
     - target: {fileID: 2192059009111035129, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2091889
@@ -50,7 +54,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2503500151800761899, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
       propertyPath: m_Name
-      value: Monster (1) Variant
+      value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340567827118048480, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557861619373672248, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
+      propertyPath: isFirstAttack
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
