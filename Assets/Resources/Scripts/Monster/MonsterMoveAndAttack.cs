@@ -54,6 +54,9 @@ public class MonsterMoveAndAttack : MonoBehaviour
 
     void Update()
     {
+        if (player == null)
+            return;
+
         SetFlip();
 
         if (monsterState.state == EMonsterState.Die)

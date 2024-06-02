@@ -22,6 +22,7 @@ public class PlayerState : MonoBehaviour
             dieTimer += Time.deltaTime;
             if (dieTimer > dieTime)
             {
+                Destroy(transform.GetChild(0).gameObject);
                 Destroy(gameObject);
             }
         }
