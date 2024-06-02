@@ -184,6 +184,8 @@ public class PlayerAttack : MonoBehaviour
         //왼쪽 마우스 클릭 - 추가 공격
         if (Input.GetMouseButtonDown(0))
         {
+            if (playerState.state != EPlayerState.Attack1)
+                return;
             //추가 공격 타이밍 체크! 
             if (attack1Timer > attack1Time * 0.75 && attack1Timer < attack1Time)
             {
