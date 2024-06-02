@@ -140,6 +140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CaveBat
       objectReference: {fileID: 0}
+    - target: {fileID: 4340567827118048480, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7557861619373672248, guid: ac291a904e2244a44b2b6b5a7d507415, type: 3}
       propertyPath: moveSpeed
       value: 3
