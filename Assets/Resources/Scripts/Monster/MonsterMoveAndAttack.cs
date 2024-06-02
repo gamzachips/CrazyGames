@@ -7,7 +7,10 @@ using UnityEngine;
 public class MonsterMoveAndAttack : MonoBehaviour
 {
     [SerializeField]
-    GameObject chasingMark;
+    GameObject chasingMarkLeft;
+
+    [SerializeField]
+    GameObject chasingMarkRight;
 
     [SerializeField]
     bool isFirstAttack = false;
@@ -53,7 +56,9 @@ public class MonsterMoveAndAttack : MonoBehaviour
         monsterState = GetComponent<MonsterState>();
         player = GameObject.Find("Player");
         spawnPos = transform.position;
-        chasingMark.SetActive(false);
+        chasingMarkLeft.SetActive(false);
+        chasingMarkRight.SetActive(false);
+        chasingMarkLeft.GetComponent<SpriteRenderer>().flipX = true;
     }
 
     void Update()
@@ -62,6 +67,7 @@ public class MonsterMoveAndAttack : MonoBehaviour
             return;
 
         SetFlip();
+        SetChasingMark();
 
         if (monsterState.state == EMonsterState.Die)
         {
@@ -112,7 +118,6 @@ public class MonsterMoveAndAttack : MonoBehaviour
                 {
                     //공격한다
                     animator.SetTrigger("Attack");
-                    chasingMark.SetActive(false);
                     monsterState.state = EMonsterState.Attack;
                 }
                 else //공격 범위 내에 없으면 
@@ -127,7 +132,6 @@ public class MonsterMoveAndAttack : MonoBehaviour
                             {
                                 monsterState.state = EMonsterState.Idle;
                                 animator.SetTrigger("Idle");
-                                chasingMark.SetActive(false);
                             }
                         }
                         else //플레이어와 충돌 중이 아니라면
@@ -139,7 +143,6 @@ public class MonsterMoveAndAttack : MonoBehaviour
                                 {
                                     monsterState.state = EMonsterState.Chase;
                                     animator.SetTrigger("Move");
-                                    chasingMark.SetActive(true);
                                 }
                             }
                         }
@@ -149,7 +152,6 @@ public class MonsterMoveAndAttack : MonoBehaviour
                     {
                         monsterState.state = EMonsterState.Return;
                         animator.SetTrigger("Move");
-                        chasingMark.SetActive(false);
                     }
 
                     //리턴 범위를 넘어갔으면 돌아간다.
@@ -157,7 +159,6 @@ public class MonsterMoveAndAttack : MonoBehaviour
                     {
                         monsterState.state = EMonsterState.Return;
                         animator.SetTrigger("Move");
-                        chasingMark.SetActive(false);
                     }
 
                     //상태에 따라 움직인다.
@@ -225,6 +226,28 @@ public class MonsterMoveAndAttack : MonoBehaviour
             {
                 sRenderer.flipX = false;
             }
+        }
+    }
+
+    private void SetChasingMark()
+    {
+        if (monsterState.state == EMonsterState.Chase)
+        {
+            if (transform.position.x > player.transform.position.x)
+            {
+                chasingMarkLeft.SetActive(true);
+                chasingMarkRight.SetActive(false);
+            }
+            else
+            {
+                chasingMarkLeft.SetActive(false);
+                chasingMarkRight.SetActive(true);
+            }
+        }
+        else
+        {
+            chasingMarkLeft.SetActive(false);
+            chasingMarkRight.SetActive(false);
         }
     }
 
