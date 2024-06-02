@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monster
   - BugPlayer
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
